@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", serif;
+}
+
+body {
+    background: url("https://fastly.picsum.photos/id/353/1600/900.jpg?hmac=Ectnw8lwnPs3fNhlf_IEnqi1vDT-dLdFv-XeD6LnqHE");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 420px;
+    background: transparent;
+    border: 2px solid #383434;
+    backdrop-filter: blur(20px);
+    box-shadow: aqua;
+    border-radius: 10px;
+    padding: 5px 30px;
+    opacity: 0; 
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease; 
+}
+
+.container.show {
+    opacity: 1; 
+    transform: translateY(0);
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: rgb(228, 228, 228);
+    margin-bottom: 25px;
+}
+
+.input-container,
+.input-password {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.input-container input,
+.input-password input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+.input-container img,
+.input-password img {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 10px; 
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.enter {
+    width: 100%;
+    height: 50px;
+    background-color: #4c00ff;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 24px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+}
+
+.enter:hover {
+    background-color: #5c20e9;
+}
+
+.register p {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.register {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.register p a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .input-container, .input-password {
+        width: 100%;
+        height: 45px;
+    }
+
+    .enter {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .input-container input,
+    .input-password input {
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+
+    .enter {
+        width: 100%;
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .forgot-password {
+        font-size: 14px;
+    }
+
+    .register p {
+        font-size: 14px;
+    }
+}
